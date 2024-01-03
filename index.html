@@ -308,7 +308,13 @@ h1 {
         const bookSlotForm = document.getElementById('book-slot');
         bookSlotForm.classList.remove('hidden');
         // Scroll down to the "Book Your Slot" section
-        bookSlotForm.scrollIntoView({ behavior: 'smooth' });
+        bookSlotForm.scrollIntoView({ behavior: 'smooth' });   
+        document.getElementById('book-slot').addEventListener('dblclick', hideBookingForm);
+    }
+
+    function hideBookingForm() {
+        const bookSlotForm = document.getElementById('book-slot');
+        bookSlotForm.classList.add('hidden');
     }
    function handleSubmit(event) {
     event.preventDefault();
