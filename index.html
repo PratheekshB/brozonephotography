@@ -227,7 +227,7 @@ h1 {
     <div class="text-center mt-3">
         <button onclick="openBookingForm()" class="btn btn-primary">Book Your Slot</button>
         <a href="https://drive.google.com/drive/folders/1dZc28V7hOvXI5ok-x5m6Ka8PFwbdgk64" class="btn" target="_blank" >View Photography</a>
-   <button id="what-we-offer-button"  class="btn">What We Offer</button>
+    <button id="what-we-offer-button" class="btn" onclick="toggleWhatWeOffer()">What We Offer</button>
     <button id="about-me-button" class="btn" onclick="window.open('https://pratheekshb.github.io/personal-portfolio/', '_blank')">About Me</button>
 
     </div>
@@ -272,7 +272,13 @@ h1 {
 </section>
 
 
-    
+    <script>
+    function toggleWhatWeOffer() {
+        const whatWeOfferSection = document.getElementById('what-we-offer');
+        whatWeOfferSection.classList.toggle('hidden');
+    }
+</script>
+
 
   <div id="book-slot" class="contact-form hidden">
     <h2>Book Your Slot</h2>
