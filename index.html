@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BroZone Photography</title>
+<style>
+      body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://drive.google.com/uc?export=view&id=16zKlCKCBS1AL4zDGBoWlxe1UxnqOvGZ4'); 
+    background-size: cover; /* Adjust as needed: cover, contain, or a specific size */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixed background */
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+        position: relative; 
+        }
+    
+h1 {
+    display: inline-block; 
+}
+        section {
+            background-color: #fff; /* Set a background color for the sections if needed */
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.7);
+
+        }
+
+        h2 {
+            color: #333;
+        }
+
+     .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+    
+    #book-slot .btn {
+    background-color: #337ab7; /* Change color for the "Book Your Slot" buttons */
+    /* Add any additional styles specific to this section */
+}
+      ##what-we-offer-button .btn {
+    background-color: #337ab7; /* Change color for the "Book Your Slot" buttons */
+    /* Add any additional styles specific to this section */
+}
+
+/* Override specific styles for the "Business Profile" section */
+.container .btn {
+    background-color: #5bc0de; /* Change color for the "Business Profile" buttons */
+    /* Add any additional styles specific to this section */
+}
+    
+    
+   .logo {
+    max-width: 100px; /* Set the maximum width of the logo */
+    height: auto;
+    position: absolute; /* Position the logo */
+    left: 10px; /* Adjust the left position as needed */
+    top: 50%; /* Center the logo vertically */
+    transform: translateY(-50%); /* Center the logo vertically */
+}
+    .contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+  
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.hidden {
+    display: none;
+}
+
+        .about-me {
+            text-align: center;
+        }
+
+        .resume-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+             color: #333;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            color: #fff;
+            }
+    /* Example focus style for buttons */
+        .btn:focus {
+        outline: 2px solid #4CAF50;
+    /* Add any additional styling for focus as needed */
+        }
+
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .contact-form,
+            .about-me {
+                max-width: 100%;
+            }
+        }
+
+        /* Additional styling for chatbot */
+        #chatbot-container {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        #chatbot-container p {
+            margin: 5px 0;
+        }
+    
+    #what-we-offer-button {
+     display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+    /* Add or modify styles as needed */
+
+.photoshoot-types {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photoshoot-type {
+    max-width: 300px;
+    text-align: center;
+    margin: 20px;
+}
+
+.photoshoot-type img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+    </style>
+
+    <!-- Your existing external stylesheets and scripts -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chatbotjs@1.1.0/dist/chatbot.min.js"></script>
+
+</head>
+  <body>
+<header class="bg-dark text-light text-center py-4">
+    <h1 class="display-4">BroZone Photography</h1>
+         <img src="https://drive.google.com/uc?export=view&id=1WTCecNIh56KAgo4-ptdbjdgqrVSvzQm4" alt="Business Logo" class="logo">
+</header>
+
+<section>
+<section>
+    <h2 class="text-center">Business Profile</h2>
+    <div class="text-center">
+        <p>Welcome to Bro Zone Photography!</p>
+        <p>We are passionate about capturing moments that last a lifetime.</p>
+        <p>Book your slot now and let us create memories for you.</p>
+    </div>
+    <div class="text-center mt-3">
+        <button onclick="openBookingForm()" class="btn btn-primary">Book Your Slot</button>
+        <a href="https://drive.google.com/drive/folders/1dZc28V7hOvXI5ok-x5m6Ka8PFwbdgk64" class="btn btn-primary" target="_blank" >View Photography</a>
+        <!-- Add a button with the id "what-we-offer-button" -->
+   <button id="what-we-offer-button"  class="btn">What We Offer</button>
+    </div>
+     
+       <section class="container mt-4">
+        <button onclick="openChat()" class="btn btn-primary">Chat Me</button>
+        <div id="chatbot-container" class="mt-3"></div>
+        <p>Contact us at: 
+        <a href="tel:+919535416976" class="text-primary">Call</a> | 
+        <a href="mailto:bhandarypratheeksh@gmail.com" class="text-primary">Email</a>
+    </p>
+    </section>
+    
+
+
+<section id="what-we-offer" class="hidden">
+    <h2>What We Offer</h2>
+    <p>Explore our different types of photoshoots below:</p>
+    <div class="photoshoot-types">
+        <!-- Add different types of photoshoots here -->
+        <div class="photoshoot-type">
+            <img src="https://drive.google.com/uc?export=view&id=1fC_6xWZ0c-6u36kyB11dO8Cm7mGLlSUQ" alt="Portrait Photoshoot">
+            <h3>Portrait Photoshoot</h3>
+            <p>Capture the essence of a person in a stunning portrait.</p>
+        </div>
+        <div class="photoshoot-type">
+            <img src="https://drive.google.com/uc?export=view&id=1Q9i-QO1XU8JWzXDqX3OpHmGlX53UCCVD" alt="Wedding Photoshoot">
+            <h3>Wedding Photoshoot</h3>
+            <p>Preserve the magic of your special day with our wedding photography services.</p>
+        </div>
+        <div class="photoshoot-type">
+            <img src="https://drive.google.com/uc?export=view&id=1zQojOs9RHZFxiD8cT3nK1LlFryQS3ucu" alt="Candid Photoshoot">
+            <h3>Candid Photoshoot</h3>
+            <p>Preserve the magic of your special day with our candid photography services.</p>
+        </div>
+        <div class="photoshoot-type">
+            <img src="https://drive.google.com/uc?export=view&id=1fbMDydE6de9U7qoXjii3g4o0Fs8BnvfA" alt="Drone Shoot">
+            <h3>Drone Shoot</h3>
+            <p>Preserve the magic of your special day with our Drone Shoot services.</p>
+        </div>
+        
+    </div>
+</section>
+
+
+    
+
+  <div id="book-slot" class="contact-form hidden">
+    <h2>Book Your Slot</h2>
+       <form onsubmit="handleSubmit(event)" action="process-form.php" method="POST">
+          <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+            
+         <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place" required>
+
+        <label for="function">Function:</label>
+        <input type="text" id="function" name="function" required>
+
+        <label for="dates">Preferred Dates:</label>
+        <input type="text" id="dates" name="dates" placeholder="e.g., June 1-3" required>
+            
+        <input type="hidden" name="owner_email" value="bhandarypratheeksh@gmail.com">
+
+
+         <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div id="feedback-container"></div>
+</section>
+
+<script>
+    function openBookingForm() {
+        const bookSlotForm = document.getElementById('book-slot');
+        bookSlotForm.classList.remove('hidden');
+    }
+   function handleSubmit(event) {
+    event.preventDefault();
+
+    // Get form elements
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const placeInput = document.getElementById('place');
+    const functionInput = document.getElementById('function');
+    const datesInput = document.getElementById('dates');
+
+    // Validate form data (you can add more validation as needed)
+    if (!nameInput.value || !phoneInput.value || !placeInput.value || !functionInput.value || !datesInput.value) {
+        alert('Please fill out all fields.');
+        return;
+    }
+
+    // Construct the data object
+    const formData = {
+        name: nameInput.value,
+        phone: phoneInput.value,
+        place: placeInput.value,
+        function: functionInput.value,
+        dates: datesInput.value,
+    };
+ const feedbackContainer = document.getElementById('feedback-container');
+    const successMessage = document.createElement('p');
+    successMessage.textContent = 'Thank you for submitting the form! We will get back to you soon.';
+    feedbackContainer.appendChild(successMessage);
+
+    // Clear form fields
+    document.getElementById('name').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('place').value = '';
+    document.getElementById('function').value = '';
+    document.getElementById('dates').value = '';
+    // Perform additional logic, such as sending the data to a server or processing it in some way
+    // For demonstration purposes, you can log the data to the console
+    console.log('Form Data:', formData);
+
+    // You can also reset the form after submission
+    event.target.reset();
+
+    // Optionally, close the form or provide feedback to the user
+}
+
+</script>
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BroZone Photography Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chatbotjs@1.1.0/dist/chatbot.min.js"></script>
+    <style>
+        /* Add your CSS styles here */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+        
+.btn-primary {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-form,
+    .about-me {
+        max-width: 100%;
+    }
+}
+
+/* Additional styling for chatbot */
+#chatbot-container {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#chatbot-container p {
+    margin: 5px 0;
+}
+
+        
+    </style>
+</head>
+<body>
+
+ <footer class="bg-dark text-light text-center py-3 mt-4 fixed-bottom">
+     &copy; BroZone Photography | Follow us on:
+    <a href="https://www.instagram.com/royal_bhandary/?igsh=aml0cGpqeWQ3c2Fr" target="_blank" class="text-light">Instagram</a>
+    | 
+    <a href="https://www.facebook.com/people/Pratheeksh-Bhandary/pfbid06rp5Wnz2RsXaSLKMQCdmJgdLM4eFCALMryZoWh6C98K2j4wHDVkFt7uem9PgEMmQl/" target="_blank" class="text-light">Facebook</a>
+    |
+     <a href="https://www.linkedin.com/in/pratheeksh-6274421a2/" target="_blank" class="text-light">LinkedIn</a>
+   
+</footer>
+    <script src="script.js"></script>
+    <script>
+        function openChat() {
+            Chatbot.init({
+                welcomeMessage: "Hi! I'm your photography assistant. How can I help you?",
+                customColors: {
+                    bot: "#333",
+                    user: "#4CAF50",
+                    background: "#fff",
+                },
+                events: {
+                    onSubmit: function (userInput) {
+                        handleUserInput(userInput);
+                    },
+                },
+            });
+        }
+
+        function handleUserInput(userInput) {
+   const chatbotContainer = document.getElementById('chatbot-container');
+
+    // Add logic to handle user input and generate responses
+
+    // Example: Display a response from the chatbot
+    const response = document.createElement('p');
+    response.textContent = `Chatbot: ${userInput}`;
+    chatbotContainer.appendChild(response);
+
+    // Scroll to the bottom to show the latest message
+    chatbotContainer.scrollTop = chatbotContainer.scrollHeight;
+
+    // Sample: Extracting and displaying the user's name
+    const nameRegex = /name: (.+)/i;
+    const nameMatch = userInput.match(nameRegex);
+
+    if (nameMatch) {
+        const clientName = nameMatch[1];
+        const response = document.createElement('p');
+        response.textContent = `Thank you, ${clientName}! We got your name.`;
+        chatbotContainer.appendChild(response);
+    }
+
+    // Sample: Extracting and displaying the user's mobile number
+    const mobileRegex = /mobile: (.+)/i;
+    const mobileMatch = userInput.match(mobileRegex);
+
+    if (mobileMatch) {
+        const mobileNumber = mobileMatch[1];
+        const response = document.createElement('p');
+        response.textContent = `Thanks for providing your mobile number: ${mobileNumber}.`;
+        chatbotContainer.appendChild(response);
+    }
+
+    // Sample: Extracting and displaying the user's place
+    const placeRegex = /place: (.+)/i;
+    const placeMatch = userInput.match(placeRegex);
+
+    if (placeMatch) {
+        const place = placeMatch[1];
+        const response = document.createElement('p');
+        response.textContent = `Great! You're located in ${place}.`;
+        chatbotContainer.appendChild(response);
+    }
+
+    // Sample: Extracting and displaying the user's function needed
+    const functionRegex = /function: (.+)/i;
+    const functionMatch = userInput.match(functionRegex);
+
+    if (functionMatch) {
+        const functionNeeded = functionMatch[1];
+        const response = document.createElement('p');
+        response.textContent = `Awesome! You need photography for ${functionNeeded}.`;
+        chatbotContainer.appendChild(response);
+    }
+
+    // Sample: Extracting and displaying the user's preferred dates
+    const datesRegex = /dates: (.+)/i;
+    const datesMatch = userInput.match(datesRegex);
+
+    if (datesMatch) {
+        const preferredDates = datesMatch[1];
+        const response = document.createElement('p');
+        response.textContent = `Got it! Your preferred dates are ${preferredDates}. We'll get back to you soon.`;
+        chatbotContainer.appendChild(response);
+    }
+}
+    </script>
+    
+    <section id="portfolio">
+        <h2>BroZone PortFolio</h2>
+        <div class="gallery">
+            <img src="https://drive.google.com/uc?export=view&id=1S1vXgOExrHMsIsP-fcHzYzqME8rxfD2w" alt="Photo 1">
+             <img src="https://drive.google.com/uc?export=view&id=1owdIKWf2KxVFeAsUDpIVc17OfcHDhbsT" alt="Photo 9">
+            <img src="https://drive.google.com/uc?export=view&id=18N9RwV-G9q7NdnNtUqGegKvgETpXG9G_" alt="Photo 2">
+            <img src="https://drive.google.com/uc?export=view&id=1ptm6HLC7-q5eLxaP8hofh-AOkuCfFbRh" alt="Photo 3">
+            <img src="https://drive.google.com/uc?export=view&id=144clVsOxUNx-dO2bD0mmZXGhZ_lVN0C-" alt="Photo 5">
+            <img src="https://drive.google.com/uc?export=view&id=15kpzcAe4489ExEtpVoYOmoOD2da5x-4L" alt="Photo 6">
+            <img src="https://drive.google.com/uc?export=view&id=1pt7R-FoXEOAT3x_kIYUV1RXpCApJVEzm" alt="Photo 8">
+            <img src="https://drive.google.com/uc?export=view&id=1rahStKha0CHzATJPr9hbodnrXSqkfZXG" alt="Photo 10">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+    
+    <section>
+        <h2>About Me</h2>
+        <p>Hi, I'm Pratheeksh Bhandary a Software Developer, the creative mind behind BroZone Photography. With a passion for capturing beautiful moments, I strive to deliver high-quality photography services. Check out my resume and explore some of my other projects.</p>
+        <a href="https://drive.google.com/file/d/10w-kdDIBW45NOd48ZcgEC_znZvI1RcfW/view?usp=sharing" target="_blank" class="btn">Resume</a>
+         <a href="https://github.com/PratheekshB" target="_blank" class="btn">Other Projects</a>
+    </section>
+
+</body>
+</html>
+</body>
+</html>
