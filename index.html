@@ -15,14 +15,14 @@
     padding: 0;
     background-color: rgba(255, 255, 255, 0.5);
 }
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+}
 
-    header {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 1em 0;
-        position: relative; 
-        }
     
 h1 {
     display: inline-block; 
@@ -73,13 +73,24 @@ h1 {
 }
 
     
-   .logo {
-    max-width: 100px; /* Set the maximum width of the logo */
+    
+  .logo {
+    max-width: 100px;
     height: auto;
-    position: absolute; /* Position the logo */
-    left: 10px; /* Adjust the left position as needed */
-    top: 50%; /* Center the logo vertically */
-    transform: translateY(-50%); /* Center the logo vertically */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+    @media (max-width: 768px) {
+    header {
+        padding: 0.5em 0;
+    }
+
+    .logo {
+        max-width: 80px;
+        left: 5px;
+    }
 }
     .contact-form form {
     display: flex;
