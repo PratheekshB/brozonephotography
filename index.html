@@ -13,7 +13,7 @@
     background-attachment: fixed; /* Fixed background */
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 header {
     background-color: #333;
@@ -226,20 +226,20 @@ h1 {
     </div>
     <div class="text-center mt-3">
         <button onclick="openBookingForm()" class="btn btn-primary">Book Your Slot</button>
-        <a href="https://drive.google.com/drive/folders/1dZc28V7hOvXI5ok-x5m6Ka8PFwbdgk64" class="btn btn-primary" target="_blank" >View Photography</a>
-        <!-- Add a button with the id "what-we-offer-button" -->
+        <a href="https://drive.google.com/drive/folders/1dZc28V7hOvXI5ok-x5m6Ka8PFwbdgk64" class="btn" target="_blank" >View Photography</a>
    <button id="what-we-offer-button"  class="btn">What We Offer</button>
+    <button id="about-me-button" class="btn" onclick="window.open('https://pratheekshb.github.io/personal-portfolio/', '_blank')">About Me</button>
+
     </div>
      
        <section class="container mt-4">
-        <button onclick="openChat()" class="btn btn-primary">Chat Me</button>
+        <button onclick="startChat()" class="btn btn-primary">Chat Me</button>
         <div id="chatbot-container" class="mt-3"></div>
         <p>Contact us at: 
         <a href="tel:+919535416976" class="text-primary">Call</a> | 
         <a href="mailto:bhandarypratheeksh@gmail.com" class="text-primary">Email</a>
-    </p>
-    </section>
-    
+       </p>
+       </section>
 
 
 <section id="what-we-offer" class="hidden">
@@ -276,7 +276,7 @@ h1 {
 
   <div id="book-slot" class="contact-form hidden">
     <h2>Book Your Slot</h2>
-       <form onsubmit="handleSubmit(event)" action="process-form.php" method="POST">
+      <form action="https://formspree.io/f/meqyqlkr" method="POST">
           <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -291,9 +291,16 @@ h1 {
 
         <label for="function">Function:</label>
         <input type="text" id="function" name="function" required>
+          
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-kz+e0gVZ2fNt3IV3sB5AsD+oyyz4Wx2IBK0H7U6DZ8xgG1DG5vPkwvMdHheuJkNG5nRTpAgFiF20CI8g9dYhCg==" crossorigin="anonymous" />
 
-        <label for="dates">Preferred Dates:</label>
-        <input type="text" id="dates" name="dates" placeholder="e.g., June 1-3" required>
+
+          <label for="dates">Preferred Dates:</label>
+          <div style="position: relative;">
+        <input type="date" id="dates" name="dates" required>
+        <i class="fas fa-calendar-alt" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);"></i>
+          </div>
+
             
         <input type="hidden" name="owner_email" value="bhandarypratheeksh@gmail.com">
 
@@ -444,94 +451,40 @@ footer {
      <a href="https://www.linkedin.com/in/pratheeksh-6274421a2/" target="_blank" class="text-light">LinkedIn</a>
    
 </footer>
-    <script src="script.js"></script>
-    <script>
-        function openChat() {
-            Chatbot.init({
-                welcomeMessage: "Hi! I'm your photography assistant. How can I help you?",
-                customColors: {
-                    bot: "#333",
-                    user: "#4CAF50",
-                    background: "#fff",
-                },
-                events: {
-                    onSubmit: function (userInput) {
-                        handleUserInput(userInput);
-                    },
-                },
-            });
-        }
-
-        function handleUserInput(userInput) {
-   const chatbotContainer = document.getElementById('chatbot-container');
-
-    // Add logic to handle user input and generate responses
-
-    // Example: Display a response from the chatbot
-    const response = document.createElement('p');
-    response.textContent = `Chatbot: ${userInput}`;
-    chatbotContainer.appendChild(response);
-
-    // Scroll to the bottom to show the latest message
-    chatbotContainer.scrollTop = chatbotContainer.scrollHeight;
-
-    // Sample: Extracting and displaying the user's name
-    const nameRegex = /name: (.+)/i;
-    const nameMatch = userInput.match(nameRegex);
-
-    if (nameMatch) {
-        const clientName = nameMatch[1];
-        const response = document.createElement('p');
-        response.textContent = `Thank you, ${clientName}! We got your name.`;
-        chatbotContainer.appendChild(response);
-    }
-
-    // Sample: Extracting and displaying the user's mobile number
-    const mobileRegex = /mobile: (.+)/i;
-    const mobileMatch = userInput.match(mobileRegex);
-
-    if (mobileMatch) {
-        const mobileNumber = mobileMatch[1];
-        const response = document.createElement('p');
-        response.textContent = `Thanks for providing your mobile number: ${mobileNumber}.`;
-        chatbotContainer.appendChild(response);
-    }
-
-    // Sample: Extracting and displaying the user's place
-    const placeRegex = /place: (.+)/i;
-    const placeMatch = userInput.match(placeRegex);
-
-    if (placeMatch) {
-        const place = placeMatch[1];
-        const response = document.createElement('p');
-        response.textContent = `Great! You're located in ${place}.`;
-        chatbotContainer.appendChild(response);
-    }
-
-    // Sample: Extracting and displaying the user's function needed
-    const functionRegex = /function: (.+)/i;
-    const functionMatch = userInput.match(functionRegex);
-
-    if (functionMatch) {
-        const functionNeeded = functionMatch[1];
-        const response = document.createElement('p');
-        response.textContent = `Awesome! You need photography for ${functionNeeded}.`;
-        chatbotContainer.appendChild(response);
-    }
-
-    // Sample: Extracting and displaying the user's preferred dates
-    const datesRegex = /dates: (.+)/i;
-    const datesMatch = userInput.match(datesRegex);
-
-    if (datesMatch) {
-        const preferredDates = datesMatch[1];
-        const response = document.createElement('p');
-        response.textContent = `Got it! Your preferred dates are ${preferredDates}. We'll get back to you soon.`;
-        chatbotContainer.appendChild(response);
+  <script>
+      function startChat() {
+    const welcomeMessage = "Hi! I'm your photography assistant. How can I help you?";
+    const userInput = prompt(welcomeMessage);
+    
+    if (userInput) {
+        handleUserInput(userInput);
     }
 }
-    </script>
-    
+
+   function handleUserInput(userInput) {
+    let response;
+
+    // Simulate different responses based on user input
+    if (userInput.toLowerCase().includes('hello') || userInput.toLowerCase().includes('hi')) {
+        response = "Hello there! How can I assist you today?again press chat me for your further question";
+    } else if (userInput.toLowerCase().includes('price')|| userInput.toLowerCase().includes('cost')) {
+        response = "Our photography services have different packages. Please contact for price";
+    } else if (userInput.toLowerCase().includes('booking')) {
+        response = "Sure, I can help you with booking.press Book Your Slot button and then Please provide details like your name, phone number, place, function, and preferred dates.";
+    }else if (userInput.toLowerCase().includes('contact') || userInput.toLowerCase().includes('call')) {
+        response = "Sure, initiating a call. Please wait...";
+      initiateCall('+919535416976');
+    } else {
+        response = "I'm sorry, I didn't understand. Feel free to ask me about photography services or use keywords like 'hello', 'price', or 'booking, 'call'.";
+    }
+
+    alert("Chatbot: " + response);
+       function initiateCall(phoneNumber) {
+    alert("Initiating call to " + phoneNumber + "...");
+}
+}
+</script>
+
     <section id="portfolio">
         <h2>BroZone PortFolio</h2>
         <div class="gallery">
@@ -576,13 +529,6 @@ footer {
             <img src="https://drive.google.com/uc?export=view&id=1rahStKha0CHzATJPr9hbodnrXSqkfZXG" alt="Photo 10" loading="lazy">
         </picture>
         </div>
-    </section>
-    
-    <section>
-        <h2>About Me</h2>
-        <p>Hi, I'm Pratheeksh Bhandary a Software Developer, the creative mind behind BroZone Photography. With a passion for capturing beautiful moments, I strive to deliver high-quality photography services. Check out my resume and explore some of my other projects.</p>
-        <a href="https://drive.google.com/file/d/10w-kdDIBW45NOd48ZcgEC_znZvI1RcfW/view?usp=sharing" target="_blank" class="btn">Resume</a>
-         <a href="https://github.com/PratheekshB" target="_blank" class="btn">Other Projects</a>
     </section>
 
 </body>
