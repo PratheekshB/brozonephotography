@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BroZone Photography Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chatbotjs@1.1.0/dist/chatbot.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-kz+e0gVZ2fNt3IV3sB5AsD+oyyz4Wx2IBK0H7U6DZ8xgG1DG5vPkwvMdHheuJkNG5nRTpAgFiF20CI8g9dYhCg==" 
+        crossorigin="anonymous" />
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+         
+    <style>
+        
+body {
+display: flex;
+font-family: 'Roboto', sans-serif;
+background-image: url('https://drive.google.com/uc?export=view&id=16zKlCKCBS1AL4zDGBoWlxe1UxnqOvGZ4');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+margin: 0;
+padding: 0;
+color: #333; /* Set a dark text color for better contrast */
+background-color: rgba(255, 255, 255, 0.9); /* Adjust the background color for better contrast */
+
+}
+
+.container {
+    margin-top: 20px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+ #portfolio {
+         background-color: rgba(255, 255, 255, 0.3); /* Set 20% transparency */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        color: #f0f0f0;
+    }
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+        
+.btn-primary {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-form,
+    .about-me {
+        max-width: 100%;
+    }
+}
+
+/* Additional styling for chatbot */
+#chatbot-container {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#chatbot-container p {
+    margin: 5px 0;
+}
+
+        
+    </style>
+</head>
+<body>
+
+ <footer class="bg-dark text-light text-center py-3 mt-4 fixed-bottom">
+        &copy; BroZone Photography | Follow us on:
+        <a href="https://www.instagram.com/royal_bhandary/?igsh=aml0cGpqeWQ3c2Fr" target="_blank" class="text-light">Instagram</a> |
+        <a href="https://www.facebook.com/people/Pratheeksh-Bhandary/pfbid06rp5Wnz2RsXaSLKMQCdmJgdLM4eFCALMryZoWh6C98K2j4wHDVkFt7uem9PgEMmQl/" target="_blank" class="text-light">Facebook</a> |
+        <a href="https://www.linkedin.com/in/pratheeksh-6274421a2/" target="_blank" class="text-light">LinkedIn</a>
+    </footer>
+ <section id="portfolio">
+        <h2>BroZone PortFolio</h2>
+     <div class="text-right mt-4 mr-4">
+        <a href="index.html" class="text-light">Home</a>
+    </div>
+        <div class="gallery">
+           <picture>
+            <source srcset="https://drive.google.com/uc?export=view&id=1S1vXgOExrHMsIsP-fcHzYzqME8rxfD2w" type="image/webp">
+            <img src="https://drive.google.com/uc?export=view&id=1S1vXgOExrHMsIsP-fcHzYzqME8rxfD2w" alt="Photo 1" loading="lazy">
+        </picture>
+
+        <picture>
+            <source srcset="https://drive.google.com/uc?export=view&id=1owdIKWf2KxVFeAsUDpIVc17OfcHDhbsT" type="image/webp">
+            <img src="https://drive.google.com/uc?export=view&id=1owdIKWf2KxVFeAsUDpIVc17OfcHDhbsT" alt="Photo 9" loading="lazy">
+        </picture>
+            
+         <picture>
+            <source srcset="https://drive.google.com/uc?export=view&id=18N9RwV-G9q7NdnNtUqGegKvgETpXG9G_" type="image/webp">
+            <img src="https://drive.google.com/uc?export=view&id=18N9RwV-G9q7NdnNtUqGegKvgETpXG9G_" alt="Photo 2" loading="lazy">
+        </picture>
+
+        <picture>
+            <source srcset="https://drive.google.com/uc?export=view&id=1ptm6HLC7-q5eLxaP8hofh-AOkuCfFbRh" type="image/webp">
+            <img src="https://drive.google.com/uc?export=view&id=1ptm6HLC7-q5eLxaP8hofh-AOkuCfFbRh" alt="Photo 3" loading="lazy">
+        </picture>
+            
+        <picture>
+            <source srcset="https://drive.google.com/uc?export=view&id=144clVsOxUNx-dO2bD0mmZXGhZ_lVN0C-" type="image/webp">
+            <img src="https://drive.google.com/uc?export=view&id=144clVsOxUNx-dO2bD0mmZXGhZ_lVN0C-" alt="Photo 5" loading="lazy">
+        </picture>
+
+        <picture>
+            <source srcset="https://drive.google.com/uc?export=view&id=15kpzcAe4489ExEtpVoYOmoOD2da5x-4L" type="image/webp">
+             <img src="https://drive.google.com/uc?export=view&id=15kpzcAe4489ExEtpVoYOmoOD2da5x-4L" alt="Photo 6" loading="lazy">
+        </picture>
+                 
+              
+        <picture>
+            <source srcset="https://drive.google.com/uc?export=view&id=1pt7R-FoXEOAT3x_kIYUV1RXpCApJVEzm" type="image/webp">
+             <img src="https://drive.google.com/uc?export=view&id=1pt7R-FoXEOAT3x_kIYUV1RXpCApJVEzm" alt="Photo 8"loading="lazy">
+        </picture>
+
+        <picture>
+            <source srcset="https://drive.google.com/uc?export=view&id=1rahStKha0CHzATJPr9hbodnrXSqkfZXG" type="image/webp">
+            <img src="https://drive.google.com/uc?export=view&id=1rahStKha0CHzATJPr9hbodnrXSqkfZXG" alt="Photo 10" loading="lazy">
+        </picture>
+        </div>
+    
+    </section>
+    </body>
+</html>

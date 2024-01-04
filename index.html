@@ -1,111 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BroZone Photography</title>
-<style>
-      body {
-    font-family: 'Roboto', sans-serif;
-    background-image: url('https://drive.google.com/uc?export=view&id=16zKlCKCBS1AL4zDGBoWlxe1UxnqOvGZ4'); 
-    background-size: cover; /* Adjust as needed: cover, contain, or a specific size */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Fixed background */
-    margin: 0;
-    padding: 0;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
-}
 
-    
-h1 {
-    display: inline-block; 
-}
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BroZone Photography Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-kz+e0gVZ2fNt3IV3sB5AsD+oyyz4Wx2IBK0H7U6DZ8xgG1DG5vPkwvMdHheuJkNG5nRTpAgFiF20CI8g9dYhCg==" 
+        crossorigin="anonymous" />
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+         
+   
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://drive.google.com/uc?export=view&id=16zKlCKCBS1AL4zDGBoWlxe1UxnqOvGZ4');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: #333; /* Set a dark text color for better contrast */
+            background-color: rgba(255, 255, 255, 0.8); 
+   
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8); 
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            font-family: 'Pacifico', cursive;
+        }
+
+        h1.display-4 {
+            font-family: 'Pacifico', cursive;
+            display: inline-block;
+            color: #fff;
+        }
+
         section {
-            background-color: #fff; /* Set a background color for the sections if needed */
-            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.95); 
+            max-width: 90%;
             margin: 20px auto;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: rgba(255, 255, 255, 0.7);
-
         }
 
         h2 {
             color: #333;
         }
 
-     .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn-primary,
+        .btn-primary:hover {
+            background-color: #337ab7;
+            color: #fff;
 }
 
-    
-    #book-slot .btn {
-    background-color: #337ab7; /* Change color for the "Book Your Slot" buttons */
-    /* Add any additional styles specific to this section */
-}
-      ##what-we-offer-button .btn {
-    background-color: #337ab7; /* Change color for the "Book Your Slot" buttons */
-    /* Add any additional styles specific to this section */
-}
+        #book-slot .btn,
+        #what-we-offer-button .btn {
+            background-color: #337ab7;
+        }
 
-/* Override specific styles for the "Business Profile" section */
-.container .btn {
-    background-color: #5bc0de; /* Change color for the "Business Profile" buttons */
-    /* Add any additional styles specific to this section */
-}
-   
-    @media (max-width: 768px) {
-    /* Styles for smaller screens go here */
-    body {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        .container .btn {
+            background-color: #5bc0de;
+        }
+
+        .logo {
+        max-width: 100px;
+        height: auto;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
     }
-}
 
-    
-    
-  .logo {
-    max-width: 100px;
-    height: auto;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-    .contact-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    @media (max-width: 576px) {
+        h1.display-4 {
+            font-size: 2rem; /* Adjust font size for smaller screens */
+        }
 
-.contact-form label {
-    text-align: left;
-    width: 100%;
-    margin-bottom: 5px;
-  
-}
+        .logo {
+            max-width: 120px;/* Adjust logo size for smaller screens */
+        }
+    }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.contact-form input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-.hidden {
-    display: none;
-}
+        .contact-form label {
+            text-align: left;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .hidden {
+            display: none;
+        }
 
         .about-me {
             text-align: center;
@@ -121,46 +132,40 @@ h1 {
             border-radius: 5px;
         }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-             color: #333;
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .container {
-            margin-top: 20px;
-        }
-
         .gallery img {
             margin-bottom: 20px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
         }
 
         .btn-primary {
             background-color: #4CAF50;
             color: #fff;
-            }
-    /* Example focus style for buttons */
-        .btn:focus {
-        outline: 2px solid #4CAF50;
-    /* Add any additional styling for focus as needed */
         }
-
 
         footer {
             position: fixed;
             bottom: 0;
             width: 100%;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
         }
 
-        /* Responsive styles */
         @media (max-width: 768px) {
-            .contact-form,
-            .about-me {
-                max-width: 100%;
+            body {
+                font-size: 14px;
             }
         }
 
-        /* Additional styling for chatbot */
         #chatbot-container {
             background-color: #f4f4f4;
             padding: 10px;
@@ -172,150 +177,143 @@ h1 {
         #chatbot-container p {
             margin: 5px 0;
         }
-    
-    #what-we-offer-button {
-     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-    /* Add or modify styles as needed */
 
-.photoshoot-types {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+        #what-we-offer-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
 
-.photoshoot-type {
-    max-width: 300px;
-    text-align: center;
-    margin: 20px;
-}
+        .photoshoot-types {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-.photoshoot-type img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
+        .photoshoot-type {
+            max-width: 300px;
+            text-align: center;
+            margin: 20px;
+        }
 
+        .photoshoot-type img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
     </style>
 
-    <!-- Your existing external stylesheets and scripts -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <!-- Your existing external scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chatbotjs@1.1.0/dist/chatbot.min.js"></script>
-
 </head>
-  <body>
-<header class="bg-dark text-light text-center py-4">
-    <h1 class="display-4">BroZone Photography</h1>
-         <img src="https://drive.google.com/uc?export=view&id=1WTCecNIh56KAgo4-ptdbjdgqrVSvzQm4" alt="Business Logo" class="logo">
-</header>
+    
+    
+<body>
+    <header class="bg-dark text-light text-center py-4">
+        <h1 class="display-4">BroZone Photography</h1>
+        <img src="https://drive.google.com/uc?export=view&id=1WTCecNIh56KAgo4-ptdbjdgqrVSvzQm4" alt="Business Logo" class="logo">
+    </header>
 
-<section>
-<section>
-    <h2 class="text-center">Business Profile</h2>
-    <div class="text-center">
-        <p>Welcome to Bro Zone Photography!</p>
-        <p>We are passionate about capturing moments that last a lifetime.</p>
-        <p>Book your slot now and let us create memories for you.</p>
-    </div>
-    <div class="text-center mt-3">
-        <button onclick="openBookingForm()" class="btn btn-primary">Book Your Slot</button>
-        <a href="https://drive.google.com/drive/folders/1dZc28V7hOvXI5ok-x5m6Ka8PFwbdgk64" class="btn" target="_blank" >View Photography</a>
-    <button id="what-we-offer-button" class="btn" onclick="toggleWhatWeOffer()">What We Offer</button>
-    <button id="about-me-button" class="btn" onclick="window.open('https://pratheekshb.github.io/personal-portfolio/', '_blank')">About Me</button>
+    <section>
+        <h2 class="text-center">Business Profile</h2>
+        <div class="text-center">
+            <p>Welcome to Bro Zone Photography!</p>
+            <p>We are passionate about capturing moments that last a lifetime.</p>
+            <p>Book your slot now and let us create memories for you.</p>
+        </div>
+        <div class="text-center mt-3">
+            <button onclick="openBookingForm()" class="btn btn-primary">Book Your Slot</button>
+            <a href="https://drive.google.com/drive/folders/1dZc28V7hOvXI5ok-x5m6Ka8PFwbdgk64" class="btn" target="_blank">View Photography</a>
+            <button id="what-we-offer-button" class="btn" onclick="toggleWhatWeOffer()">What We Offer</button>
+            <button id="about-me-button" class="btn" onclick="window.open('https://pratheekshb.github.io/personal-portfolio/', '_blank')">About Me</button>
+        </div>
 
-    </div>
-     
-       <section class="container mt-4">
-        <button onclick="startChat()" class="btn btn-primary">Chat Me</button>
-        <div id="chatbot-container" class="mt-3"></div>
-        <p>Contact us at: 
-        <a href="tel:+919535416976" class="text-primary">Call</a> | 
-        <a href="mailto:bhandarypratheeksh@gmail.com" class="text-primary">Email</a>
-       </p>
-       </section>
+        <section class="container mt-4">
+            <button onclick="startChat()" class="btn btn-primary">Chat Me</button>
+            <div id="chatbot-container" class="mt-3"></div>
+            <p>Contact us at:
+                <a href="tel:+919535416976" class="text-primary">Call</a> |
+                <a href="mailto:bhandarypratheeksh@gmail.com" class="text-primary">Email</a>
+            </p>
+            
+        </section>
 
+        <section id="what-we-offer" class="hidden">
+            <h2>What We Offer</h2>
+            <p>Explore our different types of photoshoots below:</p>
+            <div class="photoshoot-types">
+                <!-- Add different types of photoshoots here -->
+                <div class="photoshoot-type">
+                    <img src="https://drive.google.com/uc?export=view&id=1fC_6xWZ0c-6u36kyB11dO8Cm7mGLlSUQ" alt="Portrait Photoshoot">
+                    <h3>Portrait Photoshoot</h3>
+                    <p>Capture the essence of a person in a stunning portrait.</p>
+                </div>
+                <div class="photoshoot-type">
+                    <img src="https://drive.google.com/uc?export=view&id=1Q9i-QO1XU8JWzXDqX3OpHmGlX53UCCVD" alt="Wedding Photoshoot">
+                    <h3>Wedding Photoshoot</h3>
+                    <p>Preserve the magic of your special day with our wedding photography services.</p>
+                </div>
+                <div class="photoshoot-type">
+                    <img src="https://drive.google.com/uc?export=view&id=1zQojOs9RHZFxiD8cT3nK1LlFryQS3ucu" alt="Candid Photoshoot">
+                    <h3>Candid Photoshoot</h3>
+                    <p>Preserve the magic of your special day with our candid photography services.</p>
+                </div>
+                <div class="photoshoot-type">
+                    <img src="https://drive.google.com/uc?export=view&id=1fbMDydE6de9U7qoXjii3g4o0Fs8BnvfA" alt="Drone Shoot">
+                    <h3>Drone Shoot</h3>
+                    <p>Preserve the magic of your special day with our Drone Shoot services.</p>
+                </div>
+            </div>
+        </section>
 
-<section id="what-we-offer" class="hidden">
-    <h2>What We Offer</h2>
-    <p>Explore our different types of photoshoots below:</p>
-    <div class="photoshoot-types">
-        <!-- Add different types of photoshoots here -->
-        <div class="photoshoot-type">
-            <img src="https://drive.google.com/uc?export=view&id=1fC_6xWZ0c-6u36kyB11dO8Cm7mGLlSUQ" alt="Portrait Photoshoot">
-            <h3>Portrait Photoshoot</h3>
-            <p>Capture the essence of a person in a stunning portrait.</p>
+        <script>
+            function toggleWhatWeOffer() {
+                const whatWeOfferSection = document.getElementById('what-we-offer');
+                whatWeOfferSection.classList.toggle('hidden');
+            }
+        </script>
+
+        <div id="book-slot" class="contact-form hidden">
+            <h2>Book Your Slot</h2>
+            <form action="https://formspree.io/f/meqyqlkr" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="place">Place:</label>
+                <input type="text" id="place" name="place" required>
+
+                <label for="function">Function:</label>
+                <input type="text" id="function" name="function" required>
+
+                <label for="dates">Preferred Dates:</label>
+                <div style="position: relative;">
+                    <input type="date" id="dates" name="dates" required>
+                    <i class="fas fa-calendar-alt" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);"></i>
+                </div>
+
+                <input type="hidden" name="owner_email" value="bhandarypratheeksh@gmail.com">
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-        <div class="photoshoot-type">
-            <img src="https://drive.google.com/uc?export=view&id=1Q9i-QO1XU8JWzXDqX3OpHmGlX53UCCVD" alt="Wedding Photoshoot">
-            <h3>Wedding Photoshoot</h3>
-            <p>Preserve the magic of your special day with our wedding photography services.</p>
-        </div>
-        <div class="photoshoot-type">
-            <img src="https://drive.google.com/uc?export=view&id=1zQojOs9RHZFxiD8cT3nK1LlFryQS3ucu" alt="Candid Photoshoot">
-            <h3>Candid Photoshoot</h3>
-            <p>Preserve the magic of your special day with our candid photography services.</p>
-        </div>
-        <div class="photoshoot-type">
-            <img src="https://drive.google.com/uc?export=view&id=1fbMDydE6de9U7qoXjii3g4o0Fs8BnvfA" alt="Drone Shoot">
-            <h3>Drone Shoot</h3>
-            <p>Preserve the magic of your special day with our Drone Shoot services.</p>
-        </div>
+        <div id="feedback-container"></div>
         
+        
+    <div class="text-center">
+        <a href="portfolio.html">Go to Portfolio</a>
     </div>
-</section>
-
-
-    <script>
-    function toggleWhatWeOffer() {
-        const whatWeOfferSection = document.getElementById('what-we-offer');
-        whatWeOfferSection.classList.toggle('hidden');
-    }
-</script>
-
-
-  <div id="book-slot" class="contact-form hidden">
-    <h2>Book Your Slot</h2>
-      <form action="https://formspree.io/f/meqyqlkr" method="POST">
-          <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-            
-         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
-
-        <label for="place">Place:</label>
-        <input type="text" id="place" name="place" required>
-
-        <label for="function">Function:</label>
-        <input type="text" id="function" name="function" required>
-          
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-kz+e0gVZ2fNt3IV3sB5AsD+oyyz4Wx2IBK0H7U6DZ8xgG1DG5vPkwvMdHheuJkNG5nRTpAgFiF20CI8g9dYhCg==" crossorigin="anonymous" />
-
-
-          <label for="dates">Preferred Dates:</label>
-          <div style="position: relative;">
-        <input type="date" id="dates" name="dates" required>
-        <i class="fas fa-calendar-alt" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);"></i>
-          </div>
-
-            
-        <input type="hidden" name="owner_email" value="bhandarypratheeksh@gmail.com">
-
-
-         <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
-    <div id="feedback-container"></div>
-</section>
+    </section>
 
 <script>
     function openBookingForm() {
@@ -377,86 +375,7 @@ h1 {
 
 </script>
 
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BroZone Photography Portfolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/chatbotjs@1.1.0/dist/chatbot.min.js"></script>
-    <style>
-        /* Add your CSS styles here */
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-.container {
-    margin-top: 20px;
-}
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-.gallery img:hover {
-    transform: scale(1.1);
-}
-
-        
-.btn-primary {
-    background-color: #4CAF50;
-    color: #fff;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .contact-form,
-    .about-me {
-        max-width: 100%;
-    }
-}
-
-/* Additional styling for chatbot */
-#chatbot-container {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-#chatbot-container p {
-    margin: 5px 0;
-}
-
-        
-    </style>
-</head>
-<body>
-
- <footer class="bg-dark text-light text-center py-3 mt-4 fixed-bottom">
-     &copy; BroZone Photography | Follow us on:
-    <a href="https://www.instagram.com/royal_bhandary/?igsh=aml0cGpqeWQ3c2Fr" target="_blank" class="text-light">Instagram</a>
-    | 
-    <a href="https://www.facebook.com/people/Pratheeksh-Bhandary/pfbid06rp5Wnz2RsXaSLKMQCdmJgdLM4eFCALMryZoWh6C98K2j4wHDVkFt7uem9PgEMmQl/" target="_blank" class="text-light">Facebook</a>
-    |
-     <a href="https://www.linkedin.com/in/pratheeksh-6274421a2/" target="_blank" class="text-light">LinkedIn</a>
-   
-</footer>
+ 
   <script>
       function startChat() {
     const welcomeMessage = "Hi! I'm your photography assistant. How can I help you?";
@@ -491,53 +410,12 @@ footer {
 }
 </script>
 
-    <section id="portfolio">
-        <h2>BroZone PortFolio</h2>
-        <div class="gallery">
-           <picture>
-            <source srcset="https://drive.google.com/uc?export=view&id=1S1vXgOExrHMsIsP-fcHzYzqME8rxfD2w" type="image/webp">
-            <img src="https://drive.google.com/uc?export=view&id=1S1vXgOExrHMsIsP-fcHzYzqME8rxfD2w" alt="Photo 1" loading="lazy">
-        </picture>
-
-        <picture>
-            <source srcset="https://drive.google.com/uc?export=view&id=1owdIKWf2KxVFeAsUDpIVc17OfcHDhbsT" type="image/webp">
-            <img src="https://drive.google.com/uc?export=view&id=1owdIKWf2KxVFeAsUDpIVc17OfcHDhbsT" alt="Photo 9" loading="lazy">
-        </picture>
-            
-         <picture>
-            <source srcset="https://drive.google.com/uc?export=view&id=18N9RwV-G9q7NdnNtUqGegKvgETpXG9G_" type="image/webp">
-            <img src="https://drive.google.com/uc?export=view&id=18N9RwV-G9q7NdnNtUqGegKvgETpXG9G_" alt="Photo 2" loading="lazy">
-        </picture>
-
-        <picture>
-            <source srcset="https://drive.google.com/uc?export=view&id=1ptm6HLC7-q5eLxaP8hofh-AOkuCfFbRh" type="image/webp">
-            <img src="https://drive.google.com/uc?export=view&id=1ptm6HLC7-q5eLxaP8hofh-AOkuCfFbRh" alt="Photo 3" loading="lazy">
-        </picture>
-            
-        <picture>
-            <source srcset="https://drive.google.com/uc?export=view&id=144clVsOxUNx-dO2bD0mmZXGhZ_lVN0C-" type="image/webp">
-            <img src="https://drive.google.com/uc?export=view&id=144clVsOxUNx-dO2bD0mmZXGhZ_lVN0C-" alt="Photo 5" loading="lazy">
-        </picture>
-
-        <picture>
-            <source srcset="https://drive.google.com/uc?export=view&id=15kpzcAe4489ExEtpVoYOmoOD2da5x-4L" type="image/webp">
-             <img src="https://drive.google.com/uc?export=view&id=15kpzcAe4489ExEtpVoYOmoOD2da5x-4L" alt="Photo 6" loading="lazy">
-        </picture>
-                 
-              
-        <picture>
-            <source srcset="https://drive.google.com/uc?export=view&id=1pt7R-FoXEOAT3x_kIYUV1RXpCApJVEzm" type="image/webp">
-             <img src="https://drive.google.com/uc?export=view&id=1pt7R-FoXEOAT3x_kIYUV1RXpCApJVEzm" alt="Photo 8"loading="lazy">
-        </picture>
-
-        <picture>
-            <source srcset="https://drive.google.com/uc?export=view&id=1rahStKha0CHzATJPr9hbodnrXSqkfZXG" type="image/webp">
-            <img src="https://drive.google.com/uc?export=view&id=1rahStKha0CHzATJPr9hbodnrXSqkfZXG" alt="Photo 10" loading="lazy">
-        </picture>
-        </div>
-    </section>
-
-</body>
-</html>
+     <footer class="bg-dark text-light text-center py-3 mt-4 fixed-bottom">
+        &copy; BroZone Photography | Follow us on:
+        <a href="https://www.instagram.com/royal_bhandary/?igsh=aml0cGpqeWQ3c2Fr" target="_blank" class="text-light">Instagram</a> |
+        <a href="https://www.facebook.com/people/Pratheeksh-Bhandary/pfbid06rp5Wnz2RsXaSLKMQCdmJgdLM4eFCALMryZoWh6C98K2j4wHDVkFt7uem9PgEMmQl/" target="_blank" class="text-light">Facebook</a> |
+        <a href="https://www.linkedin.com/in/pratheeksh-6274421a2/" target="_blank" class="text-light">LinkedIn</a>
+    </footer>
+    
 </body>
 </html>
