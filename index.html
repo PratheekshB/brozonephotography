@@ -84,22 +84,31 @@
         z-index: 1;
     }
 
-   @media (max-width: 768px) {
+  .logo-container {
+    margin-bottom: 20px; /* Add margin to create space between logo and title */
+}
+
+@media (max-width: 768px) {
     header {
         text-align: center;
     }
 
-    .logo {
-        display: block;
+    .logo-container {
         margin: 20px auto 10px; /* Adjust the margins as needed */
         width: 60%; /* Adjust the width as needed */
     }
 
+    .logo {
+        display: block;
+        width: 100%; /* Make sure the logo takes the full width of its container */
+    }
+
     h1.display-4 {
         font-size: 2em; /* Adjust the font size as needed */
-        margin-top: 20px; /* Add some margin for spacing */
+        margin-top: 10px; /* Add some margin for spacing */
     }
 }
+
 
 
         .contact-form form {
@@ -223,8 +232,10 @@
     
     
 <body>
-   <header class="bg-dark text-light text-center py-4">
-    <img src="assets/Business%20Logo.png" alt="Business Logo" class="logo">
+<header class="bg-dark text-light text-center py-4">
+    <div class="logo-container">
+        <img src="assets/Business%20Logo.png" alt="Business Logo" class="logo">
+    </div>
     <h1 class="display-4">BroZone Photography</h1>
 </header>
 
