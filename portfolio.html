@@ -15,7 +15,7 @@
 body {
 display: flex;
 font-family: 'Roboto', sans-serif;
-background-image: url('https://drive.google.com/uc?export=view&id=16zKlCKCBS1AL4zDGBoWlxe1UxnqOvGZ4');
+background-image: url('assets/portfolio-bg-image.jpg');;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -29,12 +29,6 @@ background-color: rgba(255, 255, 255, 0.9); /* Adjust the background color for b
 .container {
     margin-top: 20px;
 }
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-    padding: 20px;
-}
 
  #portfolio {
          background-color: rgba(255, 255, 255, 0.3); /* Set 20% transparency */
@@ -44,15 +38,25 @@ background-color: rgba(255, 255, 255, 0.9); /* Adjust the background color for b
         margin-top: 20px;
         color: #f0f0f0;
     }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
 .gallery img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 }
+
 .gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger box shadow on hover */
 }
 
         

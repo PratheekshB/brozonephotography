@@ -84,15 +84,23 @@
         z-index: 1;
     }
 
-    @media (max-width: 576px) {
-        h1.display-4 {
-            font-size: 2rem; /* Adjust font size for smaller screens */
-        }
-
-        .logo {
-            max-width: 120px;/* Adjust logo size for smaller screens */
-        }
+   @media (max-width: 768px) {
+    header {
+        text-align: center;
     }
+
+    .logo {
+        display: block;
+        margin: 0 auto;
+        width: 60%; /* Adjust the width as needed */
+    }
+
+    h1.display-4 {
+        font-size: 2em; /* Adjust the font size as needed */
+        margin-top: 10px; /* Add some margin for spacing */
+    }
+}
+
         .contact-form form {
             display: flex;
             flex-direction: column;
@@ -311,7 +319,7 @@
         
         
     <div class="text-center">
-        <a href="portfolio.html" >Go to Portfolio</a>
+        <a href="portfolio.html">Go to Portfolio</a>
     </div>
     </section>
 
