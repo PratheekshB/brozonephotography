@@ -89,25 +89,26 @@
 }
 
 @media (max-width: 768px) {
-    header {
-        text-align: center;
+   header {
+        text-align: right; /* Align text to the right */
+        padding: 1em; /* Adjust padding for better spacing */
     }
 
     .logo-container {
-        margin: 20px auto 10px; /* Adjust the margins as needed */
-        width: 60%; /* Adjust the width as needed */
+        margin: 20px 10px 10px auto; /* Adjust the margins for proper spacing */
+        width: auto; /* Allow the logo container to adjust its width */
     }
 
     .logo {
-        display: block;
-        width: 100%; /* Make sure the logo takes the full width of its container */
+        max-width: 150px; /* Adjust the max-width of the logo as needed */
+        transform: none; /* Remove translateY for vertical centering */
     }
 
     h1.display-4 {
-        font-size: 2em; /* Adjust the font size as needed */
+        font-size: 1.5em; /* Adjust the font size as needed */
         margin-top: 10px; /* Add some margin for spacing */
     }
-}
+        }
 
 
 
@@ -233,7 +234,7 @@
     
 <body>
    <header class="bg-dark text-light text-center py-4">
-   <div> <img src="assets/Business%20Logo.png" alt="Business Logo" class="logo"></div>
+   <div> <img src="assets/profile%20logos.png"="Business Logo" class="logo"></div>
     <h1 class="display-4">BroZone Photography</h1>
     </header>
 
