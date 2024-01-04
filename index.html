@@ -84,6 +84,13 @@
         z-index: 1;
     }
 
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo-container {
     margin-bottom: 20px; /* Add margin to create space between logo and title */
 }
@@ -91,6 +98,10 @@
 @media (max-width: 768px) {
     header {
         text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
     }
 
     .logo-container {
@@ -108,10 +119,8 @@
     h1.display-4 {
         font-size: 2em; /* Adjust the font size as needed */
         margin-top: 10px; /* Add some margin for spacing */
-        text-align: right; /* Move the title to the right corner */
     }
 }
-
 
 
         .contact-form form {
