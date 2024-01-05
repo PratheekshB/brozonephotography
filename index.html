@@ -230,6 +230,56 @@
             border-radius: 8px;
             margin-bottom: 10px;
         }
+        
+.menu-icon {
+            font-size: 24px;
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            left: auto;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 24px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .dropdown-menu {
+            /* Add or update styles for the dropdown menu */
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 40px;
+            right: 0;
+            left: auto;
+        }
+
+        .dropdown-menu a {
+            /* Add or update styles for the dropdown menu links */
+            color: #333;
+            padding: 10px 15px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #ddd;
+        }
     </style>
 
    <!-- Your existing external scripts -->
@@ -241,10 +291,55 @@
     
     
 <body>
-   <header class="bg-dark text-light text-center py-4">
-    <img src="assets/profile%20logos.png"="Business Logo" class="logo">
-    <h1 class="display-4">BroZone Photography</h1>
+    <header class="bg-dark text-light text-center py-4">
+        <div><img src="assets/profile%20logos.png" alt="Business Logo" class="logo"></div>
+        <h1 class="display-4">BroZone Photography <span class="menu-icon" id="menu-icon">&#8226;&#8226;&#8226;</span></h1>
     </header>
+    
+    <div class="dropdown-menu" id="dropdown-menu">
+        <a href="https://pratheekshb.github.io/brozonephotography/">Home</a>
+        <a href="#" onclick="toggleWhatWeOffer()">What We Offer</a>
+        <a href="https://drive.google.com/drive/folders/1dZc28V7hOvXI5ok-x5m6Ka8PFwbdgk64" target="_blank">View Photography</a>
+        <a href="https://pratheekshb.github.io/personal-portfolio/" target="_blank">About Me</a>
+    </div>
+
+<script>
+  document.getElementById('menu-icon').addEventListener('click', function () {
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Close the dropdown if the user clicks outside of it
+  window.addEventListener('click', function (event) {
+    if (!event.target.matches('.menu-icon')) {
+      const dropdownMenu = document.getElementById('dropdown-menu');
+      if (dropdownMenu.classList.contains('show')) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+  });
+
+  // Navigation logic for menu items
+  document.getElementById('home-link').addEventListener('click', function () {
+    // Replace '#' with the actual link for your home page
+    window.location.href = 'https://pratheekshb.github.io/brozonephotography/';
+  });
+
+  document.getElementById('what-we-offer-link').addEventListener('click', function () {
+    // Replace '#' with the actual link for your "What We Offer" page
+    window.location.href = '#what-we-offer';
+  });
+
+  document.getElementById('view-photography-link').addEventListener('click', function () {
+    // Replace '#' with the actual link for your "View Photography" page
+    window.location.href = 'https://drive.google.com/drive/folders/1dZc28V7hOvXI5ok-x5m6Ka8PFwbdgk64';
+  });
+
+  document.getElementById('about-me-link').addEventListener('click', function () {
+    // Replace '#' with the actual link for your "About Me" page
+    window.location.href = 'https://pratheekshb.github.io/personal-portfolio/';
+  });
+</script>
 
     <section>
         <h2 class="text-center">Business Profile</h2>
@@ -253,6 +348,7 @@
             <p>We are passionate about capturing moments that last a lifetime.</p>
             <p>Book your slot now and let us create memories for you.</p>
         </div>
+        
         <div class="text-center mt-3">
             <button onclick="openBookingForm()" class="btn btn-primary">Book Your Slot</button>
             <a href="https://drive.google.com/drive/folders/1dZc28V7hOvXI5ok-x5m6Ka8PFwbdgk64" class="btn" target="_blank">View Photography</a>
