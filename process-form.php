@@ -1,36 +1,33 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
-    $name = htmlspecialchars($_POST["name"]);
-    $phone = htmlspecialchars($_POST["phone"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $place = htmlspecialchars($_POST["place"]);
-    $function = htmlspecialchars($_POST["function"]);
-    $dates = htmlspecialchars($_POST["dates"]);
-    $owner_email = htmlspecialchars($_POST["owner_email"]);
+    // Collect form data
+    $name = $_POST["name"];
+    $phone = $_POST["phone"];
+    $email = $_POST["email"];
+    $place = $_POST["place"];
+    $func = $_POST["function"];
+    $dates = $_POST["dates"];
+    
+    // Recipient email address
+    $to = "bhandarypratheeksh@gmail.com"; // Change this to your admin's email address
+    
+    // Subject
+    $subject = "New Booking Form Submission";
 
-    // Construct email message
-    $subject = "New Booking from BroZone Photography";
-    $message = "Name: $name\nPhone: $phone\nEmail: $email\nPlace: $place\nFunction: $function\nPreferred Dates: $dates";
+    // Email content
+    $message = "Name: $name\n";
+    $message .= "Phone: $phone\n";
+    $message .= "Email: $email\n";
+    $message .= "Place: $place\n";
+    $message .= "Function: $func\n";
+    $message .= "Preferred Dates: $dates\n";
 
-    // Set additional headers
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
+    // Additional headers
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
     // Send email
-    mail($owner_email, $subject, $message, $headers);
-
-    // Optionally, you can send a confirmation email to the user
-    $user_subject = "Booking Confirmation from BroZone Photography";
-    $user_message = "Thank you for booking with BroZone Photography. We will get back to you soon.";
-
-    mail($email, $user_subject, $user_message, $headers);
-
-    // Redirect to a confirmation page
-    header("Location: confirmation.php?success=true");
-    exit();
+    mail($to, $subject, $message, $headers);
 }
 ?>
